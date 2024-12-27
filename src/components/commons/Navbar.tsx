@@ -1,7 +1,6 @@
 import React from "react";
 import { Button } from "../ui/button";
 import { ModeToggle } from "../ModeToggle";
-import { FiMenu } from "react-icons/fi";
 import MobileNav from "./MobileNav";
 
 export default function Navbar() {
