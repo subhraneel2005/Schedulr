@@ -17,6 +17,8 @@ model User {
   sessions      Session[]
   // Optional for WebAuthn support
   Authenticator Authenticator[]
+
+  googleCalendarConnected Boolean @default(false)
  
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
