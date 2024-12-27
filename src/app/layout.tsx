@@ -5,12 +5,13 @@ import { ThemeProvider } from "@/components/theme-provider";
 export const metadata: Metadata = {
   title: "Schedulr",
   description: "Easily connect your doc with calendar and make events",
+  metadataBase: new URL('https://schedulr-v1.vercel.app/'),
   openGraph: {
     title: "Schedulr",
     description: "Easily connect your doc with calendar and make events",
     images: [
       {
-        url: '/thumbnail.png',
+        url: '/thumbnail.png',  
         width: 1200,
         height: 630,
         alt: 'Schedulr - Calendar Event Management'
