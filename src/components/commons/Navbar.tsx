@@ -8,7 +8,7 @@ import { useSession,signIn,signOut } from "next-auth/react";
 
 export default function Navbar() {
 
-  const {data:session, status} = useSession();
+  const {data:session} = useSession();
   return (
     <div className="w-full z-20 absolute top-5 flex lg:justify-evenly justify-between px-8 items-center">
       <div className="flex items-center justify-center gap-2">
