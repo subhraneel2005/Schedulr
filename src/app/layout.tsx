@@ -1,14 +1,18 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
+import { Toaster } from "sonner";
+import SessionProviderWrapper from "@/lib/SessionProviderWrapper";
 
 export const metadata: Metadata = {
   title: "Schedulr",
-  description: "Easily connect your doc with calendar and make events. Take action today and boost your productivity.",
+  description:
+    "Easily connect your doc with calendar and make events. Take action today and boost your productivity.",
   openGraph: {
     title: "Schedulr",
-    description: "Easily connect your doc with calendar and make events. Take action today and boost your productivity.",
-    url: "https://schedulr-v1.vercel.app/", 
+    description:
+      "Easily connect your doc with calendar and make events. Take action today and boost your productivity.",
+    url: "https://schedulr-v1.vercel.app/",
     type: "website",
     images: [
       {
@@ -22,7 +26,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Schedulr",
-    description: "Easily connect your doc with calendar and make events. Take action today and boost your productivity.",
+    description:
+      "Easily connect your doc with calendar and make events. Take action today and boost your productivity.",
     images: ["/thumbnail.jpg"],
   },
 };
@@ -35,14 +40,17 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          {children}
-        </ThemeProvider>
+        <SessionProviderWrapper>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            <main>{children}</main>
+            <Toaster />
+          </ThemeProvider>
+        </SessionProviderWrapper>
       </body>
     </html>
   );

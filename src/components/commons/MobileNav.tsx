@@ -11,8 +11,12 @@ import {
 import { Button } from "../ui/button";
 import { FiMenu } from "react-icons/fi";
 import { ModeToggle } from "../ModeToggle";
+import { signIn, signOut, useSession } from "next-auth/react";
 
 export default function MobileNav() {
+
+  const {data:session, status} = useSession();
+
   return (
     <div className="flex lg:hidden">
       <Sheet>
@@ -30,13 +34,13 @@ export default function MobileNav() {
             {/* Navigation Links */}
             <nav className="flex-1">
               <ul className="flex flex-col space-y-4">
-                <li className="w-full text-center cursor-pointer">
+                <li className="w-full text-center text-muted-foreground cursor-pointer">
                   Pricing
                 </li>
-                <li className="w-full text-center cursor-pointer">
+                <li className="w-full text-center text-muted-foreground cursor-pointer">
                   Features
                 </li>
-                <li className="w-full text-center cursor-pointer">
+                <li className="w-full text-center text-muted-foreground cursor-pointer">
                   Discord
                 </li>
               </ul>
@@ -47,9 +51,7 @@ export default function MobileNav() {
               <div className="flex justify-center">
                 <ModeToggle />
               </div>
-              <Button variant="secondary" className="w-full">
-                Sign In
-              </Button>
+              {!session ? (<Button className="w-full" variant="secondary" onClick={() => signIn('google', {callbackUrl: "/"})}>Sign In</Button>) : (<Button className="w-full" variant="destructive" onClick={() => signOut()}>Sign out</Button>)}
             </div>
           </div>
         </SheetContent>
