@@ -10,7 +10,7 @@ export default function Hero() {
   const router = useRouter();
   return (
     <main className='z-10 min-h-screen w-full flex flex-col justify-center items-center overflow-hidden'>
-        <h1 className='text-5xl tracking-tight scroll-m-20 lg:text-7xl text-center font-black flex flex-col md:flex-row justify-center items-center text-[#011141] dark:text-[#e7efff]'>
+        <h1 className='text-5xl tracking-tight scroll-m-20 lg:text-[86px] text-center font-[750] flex flex-col md:flex-row justify-center items-center text-[#011141] dark:text-[#e7efff]'>
             <span className='flex'>
             </span>
             Plan Schedule <span className='bg-gradient-to-r from-blue-500 to-blue-700 dark:from-blue-300 dark:to-blue-500 text-transparent bg-clip-text ml-2'>Achieve</span>
