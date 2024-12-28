@@ -5,6 +5,7 @@ import { Button } from "../ui/button";
 import { ModeToggle } from "../ModeToggle";
 import MobileNav from "./MobileNav";
 import { useSession,signIn,signOut } from "next-auth/react";
+import Link from "next/link";
 
 export default function Navbar() {
 
@@ -18,7 +19,9 @@ export default function Navbar() {
           alt="schedulr-logo"
           className="h-5 w-5 object-contain"
         />
-        <div className="dark:text-[#e7efff] text-[#719ef9] font-bold mt-1">Schedulr.</div>
+        <div className="dark:text-[#e7efff] text-[#719ef9] font-bold mt-1 cursor-pointer">
+          <Link href="/">Schedulr.</Link>
+        </div>
       </div>
       <span className="hidden lg:flex">
         <ul className="flex justify-center text-sm font-semibold items-center gap-3">
