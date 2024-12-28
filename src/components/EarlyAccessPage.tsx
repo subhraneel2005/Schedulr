@@ -49,13 +49,13 @@ export default function EarlyAccessPage() {
 
   return (
     <div className="min-h-screen w-full justify-center items-center flex flex-col">
-      <h1 className="text-4xl max-w-md md:max-w-3xl px-4 font-bold mb-4 flex text-center">
+      <h1 className="text-4xl text-[#011141] dark:text-[#e7efff] max-w-md md:max-w-3xl px-4 font-bold mb-4 mt-28 flex text-center">
         Connect Your Google Calendar
       </h1>
 
-      <Card className="md:w-[450px] w-[340px] mt-14">
+      <Card className="md:w-[450px] w-[340px] bg-[#e7efff] border-[#9fbffd] dark:bg-[#061741]  dark:border-[#082f91] border-opacity-40">
         <CardHeader>
-          <CardTitle>Fill out this form</CardTitle>
+          <CardTitle className="text-xl text-[#011141] dark:text-[#e7efff]">Fill out this form</CardTitle>
           <CardDescription>
             We will use your email address to connect your Google calendar to your
             Schedulr dashboard. Once connected, you can easily create events
