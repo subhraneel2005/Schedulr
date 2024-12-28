@@ -12,38 +12,17 @@ const authOptions: AuthOptions = {
       allowDangerousEmailAccountLinking: true,
       authorization: {
         params: {
-          scope: 'openid email profile https://www.googleapis.com/auth/calendar.readonly https://www.googleapis.com/auth/calendar.events',
-          prompt: "consent",
-          access_type: "offline",
-          response_type: "code"
+          scope: 'openid email profile https://www.googleapis.com/auth/calendar.events'
         }
       }
     }),
   ],
-  callbacks: {
-    async signIn({ account, user }) {
-      if (account?.scope?.includes("https://www.googleapis.com/auth/calendar")) {
-        await prisma.user.update({
-          where: { id: user.id },
-          data: { googleCalendarConnected: true }
-        });
-      }
-      return true;
-    },
-    async session({ session, user }) {
-      return {
-        ...session,
-        user: {
-          ...session.user,
-          id: user.id,
-          googleCalendarConnected: user.googleCalendarConnected
-        }
-      };
-    }
-  },
-  secret: process.env.NEXTAUTH_SECRET!
+  secret: process.env.NEXTAUTH_SECRET!,
 };
+
 
 const handler = NextAuth(authOptions);
 export { handler as GET, handler as POST };
-export { authOptions };
+
+
+
