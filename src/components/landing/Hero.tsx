@@ -2,13 +2,11 @@
 
 import React from 'react'
 import { Button } from '../ui/button'
-import { useSession } from 'next-auth/react'
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 
 export default function Hero() {
 
-  const {data:session} = useSession();
   const router = useRouter();
   return (
     <main className='z-10 min-h-screen w-full flex flex-col justify-center items-center overflow-hidden'>
