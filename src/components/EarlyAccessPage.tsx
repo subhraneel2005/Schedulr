@@ -49,15 +49,8 @@ export default function EarlyAccessPage() {
 
   return (
     <div className="min-h-screen w-full justify-center items-center flex flex-col">
-      <h1 className="text-4xl font-bold mb-4 flex">
+      <h1 className="text-4xl max-w-md md:max-w-3xl px-4 font-bold mb-4 flex text-center">
         Connect Your Google Calendar
-        <span className="flex pl-2 justify-center items-center">
-          <img
-            src="/google-calendar.png"
-            alt="Google Calendar"
-            className="size-7"
-          />
-        </span>
       </h1>
 
       <Card className="md:w-[450px] w-[340px] mt-14">
