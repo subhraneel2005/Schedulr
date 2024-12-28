@@ -3,7 +3,6 @@
 import React from 'react'
 import { Button } from '../ui/button'
 import { useSession } from 'next-auth/react'
-import { toast } from 'sonner';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 
