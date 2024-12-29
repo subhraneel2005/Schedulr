@@ -34,11 +34,9 @@ export default function MobileSidebar({ setActiveContent }: SidebarProps) {
             <SheetTitle className="font-bold text-2xl">Schedulr.</SheetTitle>
           </SheetHeader>
 
-          <div className="flex flex-col h-[calc(100vh-120px)] justify-between">
-            {/* Main Content Section */}
-            <div className="space-y-8">
-              {/* Navigation Links */}
-              <ul className="space-y-6">
+          <div className="flex flex-col h-[calc(100vh-120px)] justify-between items-center">
+            <div className="space-y-4">
+              <ul className="space-y-3">
                 <li
                   onClick={() => setActiveContent("profile")}
                   className="cursor-pointer flex items-center gap-3 hover:bg-accent hover:text-accent-foreground rounded-md p-2 transition-colors"
@@ -61,8 +59,10 @@ export default function MobileSidebar({ setActiveContent }: SidebarProps) {
                   <span className="font-semibold">My Events</span>
                 </li>
               </ul>
+            </div>
 
-              {/* Integrations Section */}
+            {/* Bottom Actions */}
+            <div className="space-y-4 pt-4">
               <div className="space-y-3 p-4 bg-secondary/10 rounded-lg">
                 <div className="flex items-center gap-2">
                   <span className="dark:text-[#abccf4] text-xl font-bold">
@@ -77,17 +77,11 @@ export default function MobileSidebar({ setActiveContent }: SidebarProps) {
                   Get more
                 </Button>
               </div>
-            </div>
-
-            {/* Bottom Actions */}
-            <div className="space-y-4 pt-4 border-t">
-              <div className="flex justify-center">
-                <ModeToggle />
-              </div>
               {!session ? (
                 <Button
                   className="w-full"
                   variant="secondary"
+                  size='sm'
                   onClick={() => signIn("google", { callbackUrl: "/" })}
                 >
                   Sign In
@@ -95,6 +89,7 @@ export default function MobileSidebar({ setActiveContent }: SidebarProps) {
               ) : (
                 <Button
                   className="w-full"
+                  size='sm'
                   variant="destructive"
                   onClick={() => signOut()}
                 >
