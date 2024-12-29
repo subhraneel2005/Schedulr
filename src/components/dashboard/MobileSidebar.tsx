@@ -65,13 +65,13 @@ export default function MobileSidebar({ setActiveContent }: SidebarProps) {
               {/* Integrations Section */}
               <div className="space-y-3 p-4 bg-secondary/10 rounded-lg">
                 <div className="flex items-center gap-2">
-                  <span className="text-[#abccf4] text-xl font-bold">
+                  <span className="dark:text-[#abccf4] text-xl font-bold">
                     {INTEGRATIONS_LEFT}
                   </span>
                   <span className="text-sm font-semibold">Integrations left</span>
                 </div>
                 <Button
-                  className="w-full bg-[#ffdc73] hover:bg-[#ffcf40] text-black"
+                  className="w-full bg-[#564513] dark:bg-[#ffdc73] hover:bg-[#30270c] dark:hover:bg-[#ffcf40]"
                   size="sm"
                 >
                   Get more
