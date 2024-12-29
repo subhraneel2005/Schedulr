@@ -10,7 +10,7 @@ export default function Screen() {
   >('');
 
   return (
-    <div className='w-full h-screen flex justify-center items-center px-[50px] py-[70px] gap-[50px]'>
+    <div className='w-full h-screen flex lg:flex-row flex-col justify-evenly items-center lg:px-[20px] px-[14px] lg:py-[30px] py-[16px] space-y-5 lg:space-y-0'>
         <Sidebar setActiveContent={setCurrentContent}/>
         <Content currentContent={currentContent}/>
     </div>
