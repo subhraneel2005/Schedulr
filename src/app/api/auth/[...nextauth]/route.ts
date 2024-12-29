@@ -10,11 +10,6 @@ const authOptions: AuthOptions = {
       clientId: process.env.GOOGLE_ID!,
       clientSecret: process.env.GOOGLE_SECRET!,
       allowDangerousEmailAccountLinking: true,
-      authorization: {
-        params: {
-          scope: 'openid email profile https://www.googleapis.com/auth/calendar.events'
-        }
-      }
     }),
   ],
   secret: process.env.NEXTAUTH_SECRET!,

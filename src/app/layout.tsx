@@ -5,7 +5,7 @@ import { Toaster } from "sonner";
 import SessionProviderWrapper from "@/lib/SessionProviderWrapper";
 import GridPattern from "@/components/ui/grid-pattern";
 import { cn } from "@/lib/utils";
-import Navbar from "@/components/commons/Navbar";
+import NavbarWrapper from "@/components/commons/NavbarWrapper";
 
 export const metadata: Metadata = {
   title: "Schedulr",
@@ -63,10 +63,10 @@ export default function RootLayout({
                   )}
                 />
               </div>
-              <Navbar />
+              <NavbarWrapper />
               {children}
             </main>
-            <Toaster position="bottom-right" richColors />
+            <Toaster position="top-center" richColors />
           </ThemeProvider>
         </SessionProviderWrapper>
       </body>

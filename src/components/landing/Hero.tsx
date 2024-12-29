@@ -1,11 +1,23 @@
 'use client'
 
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Button } from '../ui/button'
-import { useRouter } from 'next/navigation';
+import { useRouter, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
+import { toast } from 'sonner';
 
 export default function Hero() {
+
+  const searchParams = useSearchParams();
+
+  useEffect(() => {
+    const warning = searchParams.get('warning');
+    console.log('Warning param:', String(warning)); 
+    if (warning) {
+      toast.warning(String(warning));
+    }
+  }, [searchParams]);
+
 
   const router = useRouter();
   return (
@@ -18,7 +30,7 @@ export default function Hero() {
         <p className='md:text-lg md:max-w-xl text-[15px] leading-[20px] text-center max-w-md px-4 mt-6 text-muted-foreground font-normal'>Turn your study goals into daily actions. Connect with Google Calendar and stay on track effortlessly.</p>
 
        <div className='flex gap-4 mt-8 '>
-       <Button className='font-medium' onClick={() => router.push('/early-access')}>Get Early Access</Button> 
+       <Button className='font-medium' onClick={() => router.push('/dashboard')}>Get Started</Button> 
        <Button className='font-medium' variant='outline'>
         <Link href='https://x.com/Subhraneel55545' target='_blank'>Talk to Founder</Link>
        </Button>
