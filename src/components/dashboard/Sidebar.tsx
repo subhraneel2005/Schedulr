@@ -13,7 +13,6 @@ interface SidebarProps {
 
 export default function Sidebar({ setActiveContent }: SidebarProps) {
   const router = useRouter();
-  const INETGRATIONS_LEFT = 50;
 
   return (
     <div className="lg:w-[20%] w-[90%] dark:text-[#8FBFFA] lg:min-h-screen rounded-[24px] lg:rounded-[50px] bg-[#f6f7f9] dark:bg-[#061741] border-[#ebedf1] dark:border-[#1452EB] border-2 dark:border-opacity-[30%] flex lg:flex-col flex-row justify-between items-center lg:py-[50px] py-4 px-8 lg:px-0">
