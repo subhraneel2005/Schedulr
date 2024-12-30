@@ -22,7 +22,7 @@ export default function Content({ currentContent }: ContentProps) {
   };
 
   return (
-    <div className="lg:w-[70%] dark:text-[#8FBFFA] w-[90%] h-full rounded-[28px] lg:rounded-[40px] bg-[#e2e5eb] dark:bg-[#061741] border-[#abb3c4] dark:border-[#1452EB] border-2 dark:border-opacity-[30%] flex justify-center items-center">
+    <div className="lg:w-[70%] dark:text-[#8FBFFA] w-[90%] min-h-screen rounded-[28px] lg:rounded-[40px] bg-[#f6f7f9] dark:bg-[#061741] border-[#ebedf1] dark:border-[#1452EB] border-2 dark:border-opacity-[30%] flex justify-center items-center">
       {renderContent()}
     </div>
   );

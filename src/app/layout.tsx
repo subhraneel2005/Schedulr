@@ -58,7 +58,7 @@ export default function RootLayout({
                   x={-1}
                   y={-1}
                   className={cn(
-                    "opacity-50",
+                    "opacity-60",
                     "[mask-image:linear-gradient(to_bottom_right,white,transparent,transparent)]"
                   )}
                 />
