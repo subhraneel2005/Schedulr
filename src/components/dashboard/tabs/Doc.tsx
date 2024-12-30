@@ -15,8 +15,6 @@ interface Topic {
 
 export default function Doc() {
   const [topics, setTopics] = useState<Topic[]>([{ topic: "", description: "" }]);
-  const [loading, setLoading] = useState<boolean>(false);
-  const [error, setError] = useState<string>("");
   const [selectedTime, setSelectedTime] = useState("09:00");
   const [weekendStudy, setWeekendStudy] = useState(false);
   const [showSchedule, setShowSchedule] = useState(false);

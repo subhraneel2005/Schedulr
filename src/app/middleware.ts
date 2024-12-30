@@ -1,9 +1,7 @@
-import { NextResponse } from "next/server";
-import type { NextRequest } from "next/server";
 import { withAuth } from "next-auth/middleware";
 
 // This protects ALL routes under /dashboard
-export default withAuth(function middleware(req) {}, {
+export default withAuth(function middleware() {}, {
   callbacks: {
     authorized: ({ token }) => !!token,
   },
